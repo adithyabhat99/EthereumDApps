@@ -2,10 +2,19 @@ pragma solidity >=0.4.22 <0.7.0;
 
 contract CampaignFactory {
     mapping(string => address ) public deployedCampaigns;
+    string[] public campaigns;
     function createCampaign(string memory _name,uint _minimumContribution) public {
         require(deployedCampaigns[_name] == address(0x0),"name is already taken :(");
         Campaign newCampaign = new Campaign(_name,_minimumContribution,msg.sender);
         deployedCampaigns[_name] = address(newCampaign);
+        campaigns.push(_name);
+    }
+    function getLength() public view returns(uint){
+        return campaigns.length;
+    }
+    function getAddressOf(uint _index) public view returns(address) {
+        require(_index < campaigns.length,"index out of bounds");
+        return deployedCampaigns[campaigns[_index]];
     }
 }
 

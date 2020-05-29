@@ -1,0 +1,177 @@
+:root {
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: #ffffff;
+}
+.header {
+  text-align: center;
+}
+.campaign-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 1rem;
+}
+.campaign-list a {
+  text-decoration: none;
+}
+.campaign-item {
+  border: 0.8px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  text-align: center;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.campaign-item:hover {
+  border-color: transparent;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.campaign-name {
+  color: crimson;
+  text-decoration: none;
+}
+.campaign-address {
+  color: #000;
+}
+.address-loading {
+  color: crimson;
+}
+.loading {
+  color: crimson;
+  text-align: center;
+}
+.header-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+.header-box a {
+  height: 50%;
+  align-self: flex-end;
+}
+.create-button {
+  height: 100%;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  background-color: transparent;
+  border: 0.8px solid rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.create-button:hover {
+  border-color: transparent;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.add-icon {
+  color: rgb(231, 43, 81);
+}
+@media screen and (max-width: 900px) {
+  .navbar {
+    margin-bottom: 1rem;
+  }
+  .campaign-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* NavBar */
+
+.navbar {
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  padding-bottom: 10px;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+.nav-links {
+  text-decoration: none;
+  color: rgba(75, 75, 75, 0.7);
+  font-size: 1.2rem;
+}
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 1);
+  font-size: 24px;
+}
+.active {
+  display: block;
+}
+.is-active {
+  color: crimson;
+}
+.nav-links:hover {
+  color: rgb(0, 0, 0);
+}
+.is-active:hover {
+  color: crimson;
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main-nav li {
+    margin: 0;
+  }
+  .nav-links {
+    margin-left: 40px;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+/* create campaign */
+.form-create {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  grid-gap: 1rem;
+  margin: auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 2rem;
+  width: 70%;
+}
+.form-create input {
+  margin: auto;
+  padding: 1.5rem;
+}
+.form-create button {
+  margin: auto;
+  padding: 1rem;
+}
+.form-create label {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .form-create {
+    margin-top: 3rem;
+  }
+}

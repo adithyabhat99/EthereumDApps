@@ -3,8 +3,7 @@ config.js
 logs
 logs.json
 build
-ADDRESS
-
+ethereum_build
 
 
 # From create-react-app
